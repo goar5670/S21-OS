@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW public.strygin_view
+CREATE OR REPLACE VIEW public.KelDakroury_view
  AS
  SELECT customer.customer_id,
 	customer.store_id,
@@ -13,8 +13,8 @@ CREATE OR REPLACE VIEW public.strygin_view
    FROM customer
   WHERE ((customer.last_name)::text ~~ 'S%'::text);
 
-ALTER TABLE public.strygin_view
-	OWNER TO dcnick3;
+ALTER TABLE public.KelDakroury_view
+	OWNER TO KelDakroury;
 
 -- View: public.bl7aview
 
