@@ -14,7 +14,7 @@ CREATE OR REPLACE VIEW public.KelDakroury_view
   WHERE ((customer.last_name)::text ~~ 'S%'::text);
 
 ALTER TABLE public.KelDakroury_view
-	OWNER TO KelDakroury;
+	OWNER TO postgres;
 
 -- View: public.KelDakroury_view
 
@@ -36,7 +36,7 @@ CREATE OR REPLACE VIEW public.KelDakroury_view
   WHERE ((customer.first_name)::text ~~ 'N%'::text);
 
 ALTER TABLE public.KelDakroury_view
-	OWNER TO dcnick3;
+	OWNER TO postgres;
 
 -- Trigger
 
