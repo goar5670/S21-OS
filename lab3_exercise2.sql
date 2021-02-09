@@ -16,11 +16,11 @@ CREATE OR REPLACE VIEW public.KelDakroury_view
 ALTER TABLE public.KelDakroury_view
 	OWNER TO KelDakroury;
 
--- View: public.bl7aview
+-- View: public.KelDakroury_view
 
--- DROP VIEW public.bl7aview;
+-- DROP VIEW public.KelDakroury_view;
 
-CREATE OR REPLACE VIEW public.bl7aview
+CREATE OR REPLACE VIEW public.KelDakroury_view
  AS
  SELECT customer.customer_id,
 	customer.store_id,
@@ -35,7 +35,7 @@ CREATE OR REPLACE VIEW public.bl7aview
    FROM customer
   WHERE ((customer.first_name)::text ~~ 'N%'::text);
 
-ALTER TABLE public.bl7aview
+ALTER TABLE public.KelDakroury_view
 	OWNER TO dcnick3;
 
 -- Trigger
