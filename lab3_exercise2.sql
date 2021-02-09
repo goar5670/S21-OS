@@ -16,11 +16,11 @@ CREATE OR REPLACE VIEW public.strygin_view
 ALTER TABLE public.strygin_view
 	OWNER TO dcnick3;
 
--- View: public.nikita_view
+-- View: public.bl7aview
 
--- DROP VIEW public.nikita_view;
+-- DROP VIEW public.bl7aview;
 
-CREATE OR REPLACE VIEW public.nikita_view
+CREATE OR REPLACE VIEW public.bl7aview
  AS
  SELECT customer.customer_id,
 	customer.store_id,
@@ -35,7 +35,7 @@ CREATE OR REPLACE VIEW public.nikita_view
    FROM customer
   WHERE ((customer.first_name)::text ~~ 'N%'::text);
 
-ALTER TABLE public.nikita_view
+ALTER TABLE public.bl7aview
 	OWNER TO dcnick3;
 
 -- Trigger
