@@ -9,9 +9,6 @@ insert into accounts(id, name, credit) values (1, 'Jake Hill', 1000);
 insert into accounts(id, name, credit) values (2, 'Zach Diamond', 1000);
 insert into accounts(id, name, credit) values (3, 'Conan Grey', 1000);
 
-update accounts set credit = credit - 500 where id = 1; 
-update accounts set credit = credit + 500 where id = 3;
-
 begin;
 	savepoint T0;
 	update accounts set credit = credit - 500 where id = 1;
