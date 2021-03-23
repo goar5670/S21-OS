@@ -18,7 +18,7 @@ begin;
 	update accounts set credit = credit + 700 where id = 1;
 	savepoint T2;
 	update accounts set credit = credit - 100 where id = 2;
-	update accounts set credit = credit + 100 where id = 1;
+	update accounts set credit = credit + 100 where id = 3;
 commit;
 
 select id, credit from accounts 
