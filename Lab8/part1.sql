@@ -19,6 +19,6 @@ begin;
 	savepoint T2;
 	update accounts set credit = credit - 100 where id = 2;
 	update accounts set credit = credit + 100 where id = 3;
-	select id, credit from accounts 
+	select id, credit from accounts; 
 	rollback to T0;
 commit;
