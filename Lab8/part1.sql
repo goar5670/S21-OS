@@ -9,9 +9,6 @@ insert into accounts(id, name, credit) values (1, 'Jake Hill', 1000);
 insert into accounts(id, name, credit) values (2, 'Zach Diamond', 1000);
 insert into accounts(id, name, credit) values (3, 'Conan Grey', 1000);
 
-update accounts set credit = credit - 500 where id = 1; 
-update accounts set credit = credit + 500 where id = 3;
-
 begin;
 	savepoint T0;
 	update accounts set credit = credit - 500 where id = 1;
@@ -21,6 +18,7 @@ begin;
 	update accounts set credit = credit + 700 where id = 1;
 	savepoint T2;
 	update accounts set credit = credit - 100 where id = 2;
-	update accounts set credit = credit + 100 where id = 1;
+	update accounts set credit = credit + 100 where id = 3;
 	select id, credit from accounts 
-rollback;
+	rollback to T0;
+commit;
