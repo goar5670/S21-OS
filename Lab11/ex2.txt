@@ -1,0 +1,13 @@
+1- match (f: Fighter) where (f.weight = 155 or f.weight = 170 or f.weight = 185) and exists((f)-[:beats]->(:Fighter)) return f
+
+2- match (f: Fighter) match(m: Fighter) where (f)-[:beats]->(m) and (m)-[:beats]->(f) return count(*)
+
+3- match (f: Fighter{name: "Khabib Nurmagomedov"})-[:beats]-> (x: Fighter) -[:beats]-> (z: Fighter) where not (f)-[:beats]->(z) return z
+
+4.1- match(f: Fighter) where not exists((:Fighter)-[:beats]->(f)) return f
+
+4.2- match(f: Fighter) where not exists((f)-[:beats]->(:Fighter)) return f
+
+5.1- match (f: Fighter) return f.record
+
+5.2- match(f: fighter {name: 'Example'}) set f.record = 5
